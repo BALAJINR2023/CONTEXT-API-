@@ -9,9 +9,13 @@ const Product = ({
   image,
   category,
   addToCart,
+  removeFromCart,
 }) => {
   const handleAddToCart = () => {
     addToCart({ id, title, description, price, image, category });
+  };
+  const handleRemoveFromCart = () => {
+    removeFromCart(id);
   };
 
   return (
@@ -33,7 +37,8 @@ const Product = ({
       <h4>PRICE: ${price}</h4>
       <p>DESC: {description}</p>
       <h3>CATEGORY: {category}</h3> <br />
-      <button onClick={handleAddToCart}>ADD TO CART</button>
+      <button onClick={handleAddToCart}>ADD TO CART</button> <br/><br/>
+      <button onClick={handleRemoveFromCart}>REMOVE FROM CART</button>
     </div>
   );
 };
@@ -46,6 +51,7 @@ Product.propTypes = {
   image: PropTypes.string,
   category: PropTypes.string,
   addToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 };
 
 export default Product;

@@ -5,7 +5,7 @@ import "../App.css"
 import { useCart } from "./CartContext.jsx";
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart  } = useCart();
   const cartdata = createContext(null);
     const loadData = async () => {
     let response = await fetch("https://fakestoreapi.com/products?limit=10");
@@ -22,7 +22,7 @@ const Products = () => {
     
       <div className="cart"><Link to="/Cart"> <button>VIEW CART </button> </Link></div>
       {products.map((product) => (
-      <Product {...product} key={product.id} addToCart={addToCart}/>
+      <Product {...product} key={product.id} addToCart={addToCart} removeFromCart={removeFromCart}/>
        ))} 
       
     </>
