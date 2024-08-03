@@ -1,0 +1,25 @@
+* {
+  margin:0px;
+  padding:0px
+}
+.cart{
+  display: block;
+  text-align: end;
+}
+button{
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+span{
+  padding: 5px;
+}
+.tQ{
+  margin: 10px;
+}
+.ta{
+  margin:10px
+}
