@@ -6,7 +6,7 @@ import { useCart } from "./CartContext.jsx";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const { addToCart, removeFromCart  } = useCart();
-  const cartdata = createContext(null);
+  // const cartdata = createContext(null);
     const loadData = async () => {
     let response = await fetch("https://fakestoreapi.com/products?limit=10");
     const data = await response.json();
